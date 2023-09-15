@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 RUN --mount=type=cache,target=/var/cache/apt \
     apt-get update \
-    && apt-get install -y curl dnsutils vim netcat
+    && apt-get install -y curl dnsutils vim netcat postgresql-client
 
 RUN curl https://dl.min.io/client/mc/release/linux-amd64/mc \
     -o /usr/local/bin/mc \
